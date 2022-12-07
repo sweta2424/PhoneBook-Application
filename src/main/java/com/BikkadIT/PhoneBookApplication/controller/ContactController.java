@@ -37,5 +37,6 @@ public class ContactController {
 		List<Contact> allContact = contactServiceI.getAllContact();
 		return new ResponseEntity<List<Contact>>(allContact,HttpStatus.OK);
 		
+		
 	}
 }
