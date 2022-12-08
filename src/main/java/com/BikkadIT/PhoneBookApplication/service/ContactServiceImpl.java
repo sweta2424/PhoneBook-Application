@@ -1,6 +1,7 @@
 package com.BikkadIT.PhoneBookApplication.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,12 @@ public class ContactServiceImpl implements ContactServiceI{
 	public List<Contact> getAllContact() {
 		List<Contact> findAll = contactRepository.findAll();
 		return findAll;
+	}
+
+	@Override
+	public Contact getContactById(Integer contactId) {
+		Contact findById = contactRepository.findById(contactId).get();
+		return findById;
 	}
 
 }
